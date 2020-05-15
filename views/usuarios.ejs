@@ -8,7 +8,7 @@
     <title>RTF RPA</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark  " style="background-color: green;">
+    <nav class="navbar navbar-expand-lg navbar-dark  " style="background-color: 	#006400;">
         <a class="navbar-brand" href="#">RTF</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -35,33 +35,38 @@
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header bg-success">
+                <div class="modal-header " style="background-color: 	#006400;">
                     <h4 class="modal-title text-white ">Editar usuario </h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                     <div class="col-6">
-                      <label  for="InputDocumento">Documento</label>
-                      <input type="email" class="input-documento"  placeholder="Ingrese documento" name="documento" required>
+                  <div class="container">
+                    <div class="container">
+                      <label  for="input-documento" class="col-5">Documento</label>
+                      <input type="email" class="input-documento  col-5"  placeholder="Ingrese documento" name="documento" required>
                      </div>
-                     <div class="col-6">
-                     <label  for="InputNombre">Nombre</label>
-                     <input type="text" class="input-nombre" placeholder="Nombre" name="nombre">
+                     <div class="container">
+                     <label  for="input-nombre" class="col-5">Nombre</label>
+                     <input type="text" class="input-nombre col-5" placeholder="Nombre" name="nombre">
                      </div>
-                     <div class="col-12">
-                     <label  for="InputApellido">Apellidos</label>
-                     <input type="text" class="input-apellido"placeholder="Apellidos" name="apellidos">
+                     <div class="container">
+                     <label  for="InputApellido " class="col-5">Apellidos</label>
+                     <input type="text" class="input-apellido col-5"placeholder="Apellidos" name="apellidos">
                      </div>
-                     <div class="col-12">
-                      <label  for="InputEmail">Email</label>
-                      <input type="email" class="input-email"  placeholder="Email" name="email">
+                     <div class="container">
+                      <label  for="InputEmail" class="col-5">Email</label>
+                      <input type="email" class="input-email col-5"  placeholder="Email" name="email">
+                
                      </div>
+                  </div>
+                     
       
-               
+                      <div class="container">
+
+                     <button type="button" class="btn-editu  btn-primary">Editar</button>      
+                     <button type="button" class="btn- btn-primary"  data-dismiss="modal">Cancel</button>
+                      </div>
                 
-                
-                     <button type="button" class="btn-edit btn-secondary btn-sm ml-auto">Editar</button>      
-                     <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
       
                    
                 </div>
@@ -69,18 +74,19 @@
             </div>
         </div>
     </div>
-    <h2> Usuarios </h2>
+    <h2 class="col-12 offset-5 mt-5"> Usuarios </h2>
     <div class="container mt-5">
       <button id="update-button" class="btn btn-primary mb-5 ">Editar usuario</button>
       <button id="delete-button" class="btn btn-primary mb-5 ">Eliminar usuario</button>
     </div>
    <div class="container">
-    
-    <div class="card">
+    <div class="row">
+    <div class="col-12">
+    <div class="card ">
     
         <% for(let i = 0; i < results.length; i++) {%>
          
-            <h5 class="card-header bg-success text-white">Usuario Número: <%= i %></h5>
+            <h5 class="card-header  text-white " style="background-color: 	#006400;">Usuario Número: <%= i %></h5>
           <div class="card-body">
             <h5 class="card-title">Nombre completo:</h5>
             <p class="card-text"><%= results[i].nombre %> <%= results[i].apellidos %></p>
@@ -100,6 +106,8 @@
    </div>
       
    </div>
+  </div>
+</div>
    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

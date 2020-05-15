@@ -10,7 +10,7 @@ $("#update-button").click(function (e) {
     
 });
 
-$(".btn-edit").click(function (e) { 
+$(".btn-editu").click(function (e) { 
        
     alert(`User info: ${email.value} ${documento.value} ${nombre.value} ${apellidos.value} `);
     fetch('/usuarios', {
