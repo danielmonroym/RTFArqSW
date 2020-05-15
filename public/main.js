@@ -43,7 +43,7 @@ $(".btn-editu").click(function (e) {
 
 $(".btn-deleteu").click(function (e) { 
   if(doc.value===""){
-   alert("DIO");
+   alert("Ingrese un documento");
    return;
   }
     
@@ -69,6 +69,7 @@ $(".btn-deleteu").click(function (e) {
 
     })
    $('#DeleteModal').modal('hide'); 
+   divMensaje.textContent=''
 });
 
 /*update.addEventListener('click', ()=> {
