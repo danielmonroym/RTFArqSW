@@ -31,7 +31,7 @@
           </ul> 
         </div>
       </nav>
-      <div id="loginModal" class="modal fade" role="dialog">
+      <div id="EditModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
@@ -64,7 +64,7 @@
                       <div class="container">
 
                      <button type="button" class="btn-editu  btn-primary">Editar</button>      
-                     <button type="button" class="btn- btn-primary"  data-dismiss="modal">Cancel</button>
+                     <button type="button" class=" btn-primary"  data-dismiss="modal">Cancel</button>
                       </div>
                 
       
@@ -74,10 +74,44 @@
             </div>
         </div>
     </div>
+    <div id="DeleteModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+          <!-- Modal content-->
+          <div class="modal-content">
+              <div class="modal-header " style="background-color: 	#006400;">
+                  <h4 class="modal-title text-white ">Eliminar Usuario </h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="container">
+                    <label  for="input-documento" class="col-5">Documento</label>
+                    <input type="email" class="input-documento-delete  col-5"  placeholder="Ingrese documento" name="documento" required>
+                   </div>
+                    
+                   </div>
+                </div>
+                   
+    
+                    <div class="container">
+                   <button type="button" class="btn-deleteu  btn-primary">Eliminar</button>      
+                   <button type="button" class=" btn-primary"  data-dismiss="modal">Cancel</button>
+                    </div>
+              
+    
+                 
+              </div>
+
+          </div>
+      </div>
+  </div>
     <h2 class="col-12 offset-5 mt-5"> Usuarios </h2>
     <div class="container mt-5">
       <button id="update-button" class="btn btn-primary mb-5 ">Editar usuario</button>
       <button id="delete-button" class="btn btn-primary mb-5 ">Eliminar usuario</button>
+      <div class="mensaje">
+                       
+      </div> 
     </div>
    <div class="container">
     <div class="row">

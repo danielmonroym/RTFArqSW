@@ -37,6 +37,11 @@ app.get('/usuarios', (req,res)=>{
    
     
 });
+app.get('/registro', (req,res)=>{
+
+    res.render('registro.ejs');
+      
+});
 app.put('/usuarios', (req, res) => {
     dbCollection.findOneAndUpdate(
         { documento: req.body.documento},
@@ -55,12 +60,20 @@ app.put('/usuarios', (req, res) => {
             res.json('Success')
         })
         .catch(error => console.error(error))
-  })
-app.get('/registro', (req,res)=>{
+  });
+  app.delete('/usuarios', (req, res) => {
+    dbCollection.deleteOne(
+      { documento: req.body.documento }
+    )
+      .then(result => {
+          if(result.deletedCount === 0){
+            return res.json('No hay usuarios para borrar')
+          }
+        res.json(`Deleted documento ${req.body.documento} `)
+      })
+      .catch(error => console.error(error))
+  });
 
-    res.render('registro.ejs');
-      
-});
 app.post('/registro', (req, res) => {
     dbCollection.insertOne(req.body)
     .then(result => {
